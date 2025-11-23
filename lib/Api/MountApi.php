@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Pelican\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Pelican\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Pelican\Client\ApiException;
+use Pelican\Client\Configuration;
+use Pelican\Client\FormDataProcessor;
+use Pelican\Client\HeaderSelector;
+use Pelican\Client\ObjectSerializer;
 
 /**
  * MountApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Pelican\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -171,9 +171,9 @@ class MountApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationMounts'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function applicationMounts(string $contentType = self::contentTypes['applicationMounts'][0])
     {
@@ -188,9 +188,9 @@ class MountApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationMounts'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function applicationMountsWithHttpInfo(string $contentType = self::contentTypes['applicationMounts'][0])
     {
@@ -222,19 +222,19 @@ class MountApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        'mixed[]',
+                        'object[]',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -256,7 +256,7 @@ class MountApi
             }
 
             return $this->handleResponseWithDataType(
-                'mixed[]',
+                'object[]',
                 $request,
                 $response,
             );
@@ -265,7 +265,7 @@ class MountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'mixed[]',
+                        'object[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -273,7 +273,7 @@ class MountApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -281,7 +281,7 @@ class MountApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -325,7 +325,7 @@ class MountApi
      */
     public function applicationMountsAsyncWithHttpInfo(string $contentType = self::contentTypes['applicationMounts'][0])
     {
-        $returnType = 'mixed[]';
+        $returnType = 'object[]';
         $request = $this->applicationMountsRequest($contentType);
 
         return $this->client
@@ -450,12 +450,12 @@ class MountApi
      * Assign eggs to mount
      *
      * @param  int $mount The mount ID (required)
-     * @param  \OpenAPI\Client\Model\ApplicationMountsEggsRequest $application_mounts_eggs_request application_mounts_eggs_request (required)
+     * @param  \Pelican\Client\Model\ApplicationMountsEggsRequest $application_mounts_eggs_request application_mounts_eggs_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationMountsEggs'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function applicationMountsEggs($mount, $application_mounts_eggs_request, string $contentType = self::contentTypes['applicationMountsEggs'][0])
     {
@@ -469,12 +469,12 @@ class MountApi
      * Assign eggs to mount
      *
      * @param  int $mount The mount ID (required)
-     * @param  \OpenAPI\Client\Model\ApplicationMountsEggsRequest $application_mounts_eggs_request (required)
+     * @param  \Pelican\Client\Model\ApplicationMountsEggsRequest $application_mounts_eggs_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationMountsEggs'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function applicationMountsEggsWithHttpInfo($mount, $application_mounts_eggs_request, string $contentType = self::contentTypes['applicationMountsEggs'][0])
     {
@@ -506,19 +506,19 @@ class MountApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        'mixed[]',
+                        'object[]',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -540,7 +540,7 @@ class MountApi
             }
 
             return $this->handleResponseWithDataType(
-                'mixed[]',
+                'object[]',
                 $request,
                 $response,
             );
@@ -549,7 +549,7 @@ class MountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'mixed[]',
+                        'object[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -557,7 +557,7 @@ class MountApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -565,7 +565,7 @@ class MountApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -583,7 +583,7 @@ class MountApi
      * Assign eggs to mount
      *
      * @param  int $mount The mount ID (required)
-     * @param  \OpenAPI\Client\Model\ApplicationMountsEggsRequest $application_mounts_eggs_request (required)
+     * @param  \Pelican\Client\Model\ApplicationMountsEggsRequest $application_mounts_eggs_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationMountsEggs'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -605,7 +605,7 @@ class MountApi
      * Assign eggs to mount
      *
      * @param  int $mount The mount ID (required)
-     * @param  \OpenAPI\Client\Model\ApplicationMountsEggsRequest $application_mounts_eggs_request (required)
+     * @param  \Pelican\Client\Model\ApplicationMountsEggsRequest $application_mounts_eggs_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationMountsEggs'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -613,7 +613,7 @@ class MountApi
      */
     public function applicationMountsEggsAsyncWithHttpInfo($mount, $application_mounts_eggs_request, string $contentType = self::contentTypes['applicationMountsEggs'][0])
     {
-        $returnType = 'mixed[]';
+        $returnType = 'object[]';
         $request = $this->applicationMountsEggsRequest($mount, $application_mounts_eggs_request, $contentType);
 
         return $this->client
@@ -656,7 +656,7 @@ class MountApi
      * Create request for operation 'applicationMountsEggs'
      *
      * @param  int $mount The mount ID (required)
-     * @param  \OpenAPI\Client\Model\ApplicationMountsEggsRequest $application_mounts_eggs_request (required)
+     * @param  \Pelican\Client\Model\ApplicationMountsEggsRequest $application_mounts_eggs_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationMountsEggs'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -769,12 +769,12 @@ class MountApi
      * Assign nodes to mount
      *
      * @param  int $mount The mount ID (required)
-     * @param  \OpenAPI\Client\Model\ApplicationMountsNodesRequest $application_mounts_nodes_request application_mounts_nodes_request (required)
+     * @param  \Pelican\Client\Model\ApplicationMountsNodesRequest $application_mounts_nodes_request application_mounts_nodes_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationMountsNodes'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function applicationMountsNodes($mount, $application_mounts_nodes_request, string $contentType = self::contentTypes['applicationMountsNodes'][0])
     {
@@ -788,12 +788,12 @@ class MountApi
      * Assign nodes to mount
      *
      * @param  int $mount The mount ID (required)
-     * @param  \OpenAPI\Client\Model\ApplicationMountsNodesRequest $application_mounts_nodes_request (required)
+     * @param  \Pelican\Client\Model\ApplicationMountsNodesRequest $application_mounts_nodes_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationMountsNodes'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function applicationMountsNodesWithHttpInfo($mount, $application_mounts_nodes_request, string $contentType = self::contentTypes['applicationMountsNodes'][0])
     {
@@ -825,19 +825,19 @@ class MountApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        'mixed[]',
+                        'object[]',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -859,7 +859,7 @@ class MountApi
             }
 
             return $this->handleResponseWithDataType(
-                'mixed[]',
+                'object[]',
                 $request,
                 $response,
             );
@@ -868,7 +868,7 @@ class MountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'mixed[]',
+                        'object[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -876,7 +876,7 @@ class MountApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -884,7 +884,7 @@ class MountApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -902,7 +902,7 @@ class MountApi
      * Assign nodes to mount
      *
      * @param  int $mount The mount ID (required)
-     * @param  \OpenAPI\Client\Model\ApplicationMountsNodesRequest $application_mounts_nodes_request (required)
+     * @param  \Pelican\Client\Model\ApplicationMountsNodesRequest $application_mounts_nodes_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationMountsNodes'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -924,7 +924,7 @@ class MountApi
      * Assign nodes to mount
      *
      * @param  int $mount The mount ID (required)
-     * @param  \OpenAPI\Client\Model\ApplicationMountsNodesRequest $application_mounts_nodes_request (required)
+     * @param  \Pelican\Client\Model\ApplicationMountsNodesRequest $application_mounts_nodes_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationMountsNodes'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -932,7 +932,7 @@ class MountApi
      */
     public function applicationMountsNodesAsyncWithHttpInfo($mount, $application_mounts_nodes_request, string $contentType = self::contentTypes['applicationMountsNodes'][0])
     {
-        $returnType = 'mixed[]';
+        $returnType = 'object[]';
         $request = $this->applicationMountsNodesRequest($mount, $application_mounts_nodes_request, $contentType);
 
         return $this->client
@@ -975,7 +975,7 @@ class MountApi
      * Create request for operation 'applicationMountsNodes'
      *
      * @param  int $mount The mount ID (required)
-     * @param  \OpenAPI\Client\Model\ApplicationMountsNodesRequest $application_mounts_nodes_request (required)
+     * @param  \Pelican\Client\Model\ApplicationMountsNodesRequest $application_mounts_nodes_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationMountsNodes'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1088,12 +1088,12 @@ class MountApi
      * Assign servers to mount
      *
      * @param  int $mount The mount ID (required)
-     * @param  \OpenAPI\Client\Model\ApplicationMountsServersRequest $application_mounts_servers_request application_mounts_servers_request (required)
+     * @param  \Pelican\Client\Model\ApplicationMountsServersRequest $application_mounts_servers_request application_mounts_servers_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationMountsServers'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function applicationMountsServers($mount, $application_mounts_servers_request, string $contentType = self::contentTypes['applicationMountsServers'][0])
     {
@@ -1107,12 +1107,12 @@ class MountApi
      * Assign servers to mount
      *
      * @param  int $mount The mount ID (required)
-     * @param  \OpenAPI\Client\Model\ApplicationMountsServersRequest $application_mounts_servers_request (required)
+     * @param  \Pelican\Client\Model\ApplicationMountsServersRequest $application_mounts_servers_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationMountsServers'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function applicationMountsServersWithHttpInfo($mount, $application_mounts_servers_request, string $contentType = self::contentTypes['applicationMountsServers'][0])
     {
@@ -1144,19 +1144,19 @@ class MountApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        'mixed[]',
+                        'object[]',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -1178,7 +1178,7 @@ class MountApi
             }
 
             return $this->handleResponseWithDataType(
-                'mixed[]',
+                'object[]',
                 $request,
                 $response,
             );
@@ -1187,7 +1187,7 @@ class MountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'mixed[]',
+                        'object[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1195,7 +1195,7 @@ class MountApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1203,7 +1203,7 @@ class MountApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1221,7 +1221,7 @@ class MountApi
      * Assign servers to mount
      *
      * @param  int $mount The mount ID (required)
-     * @param  \OpenAPI\Client\Model\ApplicationMountsServersRequest $application_mounts_servers_request (required)
+     * @param  \Pelican\Client\Model\ApplicationMountsServersRequest $application_mounts_servers_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationMountsServers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1243,7 +1243,7 @@ class MountApi
      * Assign servers to mount
      *
      * @param  int $mount The mount ID (required)
-     * @param  \OpenAPI\Client\Model\ApplicationMountsServersRequest $application_mounts_servers_request (required)
+     * @param  \Pelican\Client\Model\ApplicationMountsServersRequest $application_mounts_servers_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationMountsServers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1251,7 +1251,7 @@ class MountApi
      */
     public function applicationMountsServersAsyncWithHttpInfo($mount, $application_mounts_servers_request, string $contentType = self::contentTypes['applicationMountsServers'][0])
     {
-        $returnType = 'mixed[]';
+        $returnType = 'object[]';
         $request = $this->applicationMountsServersRequest($mount, $application_mounts_servers_request, $contentType);
 
         return $this->client
@@ -1294,7 +1294,7 @@ class MountApi
      * Create request for operation 'applicationMountsServers'
      *
      * @param  int $mount The mount ID (required)
-     * @param  \OpenAPI\Client\Model\ApplicationMountsServersRequest $application_mounts_servers_request (required)
+     * @param  \Pelican\Client\Model\ApplicationMountsServersRequest $application_mounts_servers_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationMountsServers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1409,9 +1409,9 @@ class MountApi
      * @param  int $mount The mount ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationMountsView'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function applicationMountsView($mount, string $contentType = self::contentTypes['applicationMountsView'][0])
     {
@@ -1427,9 +1427,9 @@ class MountApi
      * @param  int $mount The mount ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationMountsView'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function applicationMountsViewWithHttpInfo($mount, string $contentType = self::contentTypes['applicationMountsView'][0])
     {
@@ -1461,25 +1461,25 @@ class MountApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        'mixed[]',
+                        'object[]',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -1501,7 +1501,7 @@ class MountApi
             }
 
             return $this->handleResponseWithDataType(
-                'mixed[]',
+                'object[]',
                 $request,
                 $response,
             );
@@ -1510,7 +1510,7 @@ class MountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'mixed[]',
+                        'object[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1518,7 +1518,7 @@ class MountApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1526,7 +1526,7 @@ class MountApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1534,7 +1534,7 @@ class MountApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1580,7 +1580,7 @@ class MountApi
      */
     public function applicationMountsViewAsyncWithHttpInfo($mount, string $contentType = self::contentTypes['applicationMountsView'][0])
     {
-        $returnType = 'mixed[]';
+        $returnType = 'object[]';
         $request = $this->applicationMountsViewRequest($mount, $contentType);
 
         return $this->client
@@ -1723,9 +1723,9 @@ class MountApi
      * @param  int $mount The mount ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mountDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return string[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return string[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function mountDelete($mount, string $contentType = self::contentTypes['mountDelete'][0])
     {
@@ -1741,9 +1741,9 @@ class MountApi
      * @param  int $mount The mount ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mountDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of string[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of string[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function mountDeleteWithHttpInfo($mount, string $contentType = self::contentTypes['mountDelete'][0])
     {
@@ -1781,19 +1781,19 @@ class MountApi
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -1832,7 +1832,7 @@ class MountApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1840,7 +1840,7 @@ class MountApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1848,7 +1848,7 @@ class MountApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2038,9 +2038,9 @@ class MountApi
      * @param  int $egg_id egg_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mountDeleteEgg'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return string[]|\OpenAPI\Client\Model\InlineObject1
+     * @return string[]|\Pelican\Client\Model\InlineObject1
      */
     public function mountDeleteEgg($mount, $egg_id, string $contentType = self::contentTypes['mountDeleteEgg'][0])
     {
@@ -2057,9 +2057,9 @@ class MountApi
      * @param  int $egg_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mountDeleteEgg'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of string[]|\OpenAPI\Client\Model\InlineObject1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of string[]|\Pelican\Client\Model\InlineObject1, HTTP status code, HTTP response headers (array of strings)
      */
     public function mountDeleteEggWithHttpInfo($mount, $egg_id, string $contentType = self::contentTypes['mountDeleteEgg'][0])
     {
@@ -2097,7 +2097,7 @@ class MountApi
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
@@ -2136,7 +2136,7 @@ class MountApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2344,9 +2344,9 @@ class MountApi
      * @param  int $node_id node_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mountDeleteNode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return string[]|\OpenAPI\Client\Model\InlineObject1
+     * @return string[]|\Pelican\Client\Model\InlineObject1
      */
     public function mountDeleteNode($mount, $node_id, string $contentType = self::contentTypes['mountDeleteNode'][0])
     {
@@ -2363,9 +2363,9 @@ class MountApi
      * @param  int $node_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mountDeleteNode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of string[]|\OpenAPI\Client\Model\InlineObject1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of string[]|\Pelican\Client\Model\InlineObject1, HTTP status code, HTTP response headers (array of strings)
      */
     public function mountDeleteNodeWithHttpInfo($mount, $node_id, string $contentType = self::contentTypes['mountDeleteNode'][0])
     {
@@ -2403,7 +2403,7 @@ class MountApi
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
@@ -2442,7 +2442,7 @@ class MountApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2650,9 +2650,9 @@ class MountApi
      * @param  int $server_id server_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mountDeleteServer'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return string[]|\OpenAPI\Client\Model\InlineObject1
+     * @return string[]|\Pelican\Client\Model\InlineObject1
      */
     public function mountDeleteServer($mount, $server_id, string $contentType = self::contentTypes['mountDeleteServer'][0])
     {
@@ -2669,9 +2669,9 @@ class MountApi
      * @param  int $server_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mountDeleteServer'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of string[]|\OpenAPI\Client\Model\InlineObject1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of string[]|\Pelican\Client\Model\InlineObject1, HTTP status code, HTTP response headers (array of strings)
      */
     public function mountDeleteServerWithHttpInfo($mount, $server_id, string $contentType = self::contentTypes['mountDeleteServer'][0])
     {
@@ -2709,7 +2709,7 @@ class MountApi
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
@@ -2748,7 +2748,7 @@ class MountApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2955,9 +2955,9 @@ class MountApi
      * @param  int $mount The mount ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mountGetEggs'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function mountGetEggs($mount, string $contentType = self::contentTypes['mountGetEggs'][0])
     {
@@ -2973,9 +2973,9 @@ class MountApi
      * @param  int $mount The mount ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mountGetEggs'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function mountGetEggsWithHttpInfo($mount, string $contentType = self::contentTypes['mountGetEggs'][0])
     {
@@ -3007,25 +3007,25 @@ class MountApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        'mixed[]',
+                        'object[]',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -3047,7 +3047,7 @@ class MountApi
             }
 
             return $this->handleResponseWithDataType(
-                'mixed[]',
+                'object[]',
                 $request,
                 $response,
             );
@@ -3056,7 +3056,7 @@ class MountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'mixed[]',
+                        'object[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3064,7 +3064,7 @@ class MountApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3072,7 +3072,7 @@ class MountApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3080,7 +3080,7 @@ class MountApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3126,7 +3126,7 @@ class MountApi
      */
     public function mountGetEggsAsyncWithHttpInfo($mount, string $contentType = self::contentTypes['mountGetEggs'][0])
     {
-        $returnType = 'mixed[]';
+        $returnType = 'object[]';
         $request = $this->mountGetEggsRequest($mount, $contentType);
 
         return $this->client
@@ -3269,9 +3269,9 @@ class MountApi
      * @param  int $mount The mount ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mountGetNodes'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function mountGetNodes($mount, string $contentType = self::contentTypes['mountGetNodes'][0])
     {
@@ -3287,9 +3287,9 @@ class MountApi
      * @param  int $mount The mount ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mountGetNodes'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function mountGetNodesWithHttpInfo($mount, string $contentType = self::contentTypes['mountGetNodes'][0])
     {
@@ -3321,25 +3321,25 @@ class MountApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        'mixed[]',
+                        'object[]',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -3361,7 +3361,7 @@ class MountApi
             }
 
             return $this->handleResponseWithDataType(
-                'mixed[]',
+                'object[]',
                 $request,
                 $response,
             );
@@ -3370,7 +3370,7 @@ class MountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'mixed[]',
+                        'object[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3378,7 +3378,7 @@ class MountApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3386,7 +3386,7 @@ class MountApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3394,7 +3394,7 @@ class MountApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3440,7 +3440,7 @@ class MountApi
      */
     public function mountGetNodesAsyncWithHttpInfo($mount, string $contentType = self::contentTypes['mountGetNodes'][0])
     {
-        $returnType = 'mixed[]';
+        $returnType = 'object[]';
         $request = $this->mountGetNodesRequest($mount, $contentType);
 
         return $this->client
@@ -3583,9 +3583,9 @@ class MountApi
      * @param  int $mount The mount ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mountGetServers'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function mountGetServers($mount, string $contentType = self::contentTypes['mountGetServers'][0])
     {
@@ -3601,9 +3601,9 @@ class MountApi
      * @param  int $mount The mount ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mountGetServers'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function mountGetServersWithHttpInfo($mount, string $contentType = self::contentTypes['mountGetServers'][0])
     {
@@ -3635,25 +3635,25 @@ class MountApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        'mixed[]',
+                        'object[]',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -3675,7 +3675,7 @@ class MountApi
             }
 
             return $this->handleResponseWithDataType(
-                'mixed[]',
+                'object[]',
                 $request,
                 $response,
             );
@@ -3684,7 +3684,7 @@ class MountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'mixed[]',
+                        'object[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3692,7 +3692,7 @@ class MountApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3700,7 +3700,7 @@ class MountApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3708,7 +3708,7 @@ class MountApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3754,7 +3754,7 @@ class MountApi
      */
     public function mountGetServersAsyncWithHttpInfo($mount, string $contentType = self::contentTypes['mountGetServers'][0])
     {
-        $returnType = 'mixed[]';
+        $returnType = 'object[]';
         $request = $this->mountGetServersRequest($mount, $contentType);
 
         return $this->client
@@ -3896,9 +3896,9 @@ class MountApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mountStore'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return object|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function mountStore(string $contentType = self::contentTypes['mountStore'][0])
     {
@@ -3913,9 +3913,9 @@ class MountApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mountStore'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of object|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function mountStoreWithHttpInfo(string $contentType = self::contentTypes['mountStore'][0])
     {
@@ -3953,13 +3953,13 @@ class MountApi
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -3998,7 +3998,7 @@ class MountApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4006,7 +4006,7 @@ class MountApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4177,9 +4177,9 @@ class MountApi
      * @param  int $mount The mount ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mountUpdate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function mountUpdate($mount, string $contentType = self::contentTypes['mountUpdate'][0])
     {
@@ -4195,9 +4195,9 @@ class MountApi
      * @param  int $mount The mount ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mountUpdate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function mountUpdateWithHttpInfo($mount, string $contentType = self::contentTypes['mountUpdate'][0])
     {
@@ -4229,25 +4229,25 @@ class MountApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        'mixed[]',
+                        'object[]',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -4269,7 +4269,7 @@ class MountApi
             }
 
             return $this->handleResponseWithDataType(
-                'mixed[]',
+                'object[]',
                 $request,
                 $response,
             );
@@ -4278,7 +4278,7 @@ class MountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'mixed[]',
+                        'object[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4286,7 +4286,7 @@ class MountApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4294,7 +4294,7 @@ class MountApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4302,7 +4302,7 @@ class MountApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4348,7 +4348,7 @@ class MountApi
      */
     public function mountUpdateAsyncWithHttpInfo($mount, string $contentType = self::contentTypes['mountUpdate'][0])
     {
-        $returnType = 'mixed[]';
+        $returnType = 'object[]';
         $request = $this->mountUpdateRequest($mount, $contentType);
 
         return $this->client

@@ -1,4 +1,4 @@
-# OpenAPI\Client\EggApi
+# Pelican\Client\EggApi
 
 
 
@@ -14,7 +14,7 @@ All URIs are relative to https://game.prepaid-host.com/api/application, except i
 ## `applicationEggsEggs()`
 
 ```php
-applicationEggsEggs(): mixed[]
+applicationEggsEggs(): object[]
 ```
 
 List eggs
@@ -29,10 +29,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\EggApi(
+$apiInstance = new Pelican\Client\Api\EggApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -53,7 +53,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -86,10 +86,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\EggApi(
+$apiInstance = new Pelican\Client\Api\EggApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -133,7 +133,7 @@ try {
 ## `applicationEggsEggsView()`
 
 ```php
-applicationEggsEggsView($egg): mixed[]
+applicationEggsEggsView($egg): object[]
 ```
 
 View egg
@@ -148,10 +148,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\EggApi(
+$apiInstance = new Pelican\Client\Api\EggApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -175,7 +175,7 @@ try {
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 

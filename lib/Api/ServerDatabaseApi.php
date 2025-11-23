@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Pelican\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Pelican\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Pelican\Client\ApiException;
+use Pelican\Client\Configuration;
+use Pelican\Client\FormDataProcessor;
+use Pelican\Client\HeaderSelector;
+use Pelican\Client\ObjectSerializer;
 
 /**
  * ServerDatabaseApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Pelican\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -145,9 +145,9 @@ class ServerDatabaseApi
      * @param  int $server The server ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationServersDatabases'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function applicationServersDatabases($server, string $contentType = self::contentTypes['applicationServersDatabases'][0])
     {
@@ -163,9 +163,9 @@ class ServerDatabaseApi
      * @param  int $server The server ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationServersDatabases'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function applicationServersDatabasesWithHttpInfo($server, string $contentType = self::contentTypes['applicationServersDatabases'][0])
     {
@@ -197,25 +197,25 @@ class ServerDatabaseApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        'mixed[]',
+                        'object[]',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -237,7 +237,7 @@ class ServerDatabaseApi
             }
 
             return $this->handleResponseWithDataType(
-                'mixed[]',
+                'object[]',
                 $request,
                 $response,
             );
@@ -246,7 +246,7 @@ class ServerDatabaseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'mixed[]',
+                        'object[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class ServerDatabaseApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +262,7 @@ class ServerDatabaseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -270,7 +270,7 @@ class ServerDatabaseApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -316,7 +316,7 @@ class ServerDatabaseApi
      */
     public function applicationServersDatabasesAsyncWithHttpInfo($server, string $contentType = self::contentTypes['applicationServersDatabases'][0])
     {
-        $returnType = 'mixed[]';
+        $returnType = 'object[]';
         $request = $this->applicationServersDatabasesRequest($server, $contentType);
 
         return $this->client
@@ -460,9 +460,9 @@ class ServerDatabaseApi
      * @param  int $database The database ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationServersDatabasesView'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function applicationServersDatabasesView($server, $database, string $contentType = self::contentTypes['applicationServersDatabasesView'][0])
     {
@@ -479,9 +479,9 @@ class ServerDatabaseApi
      * @param  int $database The database ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationServersDatabasesView'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function applicationServersDatabasesViewWithHttpInfo($server, $database, string $contentType = self::contentTypes['applicationServersDatabasesView'][0])
     {
@@ -513,25 +513,25 @@ class ServerDatabaseApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        'mixed[]',
+                        'object[]',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -553,7 +553,7 @@ class ServerDatabaseApi
             }
 
             return $this->handleResponseWithDataType(
-                'mixed[]',
+                'object[]',
                 $request,
                 $response,
             );
@@ -562,7 +562,7 @@ class ServerDatabaseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'mixed[]',
+                        'object[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -570,7 +570,7 @@ class ServerDatabaseApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -578,7 +578,7 @@ class ServerDatabaseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -586,7 +586,7 @@ class ServerDatabaseApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -634,7 +634,7 @@ class ServerDatabaseApi
      */
     public function applicationServersDatabasesViewAsyncWithHttpInfo($server, $database, string $contentType = self::contentTypes['applicationServersDatabasesView'][0])
     {
-        $returnType = 'mixed[]';
+        $returnType = 'object[]';
         $request = $this->applicationServersDatabasesViewRequest($server, $database, $contentType);
 
         return $this->client
@@ -794,7 +794,7 @@ class ServerDatabaseApi
      * @param  int $database The database ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['databaseDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -812,7 +812,7 @@ class ServerDatabaseApi
      * @param  int $database The database ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['databaseDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -849,7 +849,7 @@ class ServerDatabaseApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -857,7 +857,7 @@ class ServerDatabaseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -865,7 +865,7 @@ class ServerDatabaseApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1060,9 +1060,9 @@ class ServerDatabaseApi
      * @param  int $database The database ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['databaseResetPassword'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return string[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return string[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function databaseResetPassword($server, $database, string $contentType = self::contentTypes['databaseResetPassword'][0])
     {
@@ -1079,9 +1079,9 @@ class ServerDatabaseApi
      * @param  int $database The database ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['databaseResetPassword'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of string[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of string[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function databaseResetPasswordWithHttpInfo($server, $database, string $contentType = self::contentTypes['databaseResetPassword'][0])
     {
@@ -1119,19 +1119,19 @@ class ServerDatabaseApi
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -1170,7 +1170,7 @@ class ServerDatabaseApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1178,7 +1178,7 @@ class ServerDatabaseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1186,7 +1186,7 @@ class ServerDatabaseApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1391,12 +1391,12 @@ class ServerDatabaseApi
      * Create database
      *
      * @param  int $server The server ID (required)
-     * @param  \OpenAPI\Client\Model\StoreServerDatabaseRequest $store_server_database_request store_server_database_request (required)
+     * @param  \Pelican\Client\Model\StoreServerDatabaseRequest $store_server_database_request store_server_database_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['databaseStore'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return object|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function databaseStore($server, $store_server_database_request, string $contentType = self::contentTypes['databaseStore'][0])
     {
@@ -1410,12 +1410,12 @@ class ServerDatabaseApi
      * Create database
      *
      * @param  int $server The server ID (required)
-     * @param  \OpenAPI\Client\Model\StoreServerDatabaseRequest $store_server_database_request (required)
+     * @param  \Pelican\Client\Model\StoreServerDatabaseRequest $store_server_database_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['databaseStore'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of object|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function databaseStoreWithHttpInfo($server, $store_server_database_request, string $contentType = self::contentTypes['databaseStore'][0])
     {
@@ -1453,19 +1453,19 @@ class ServerDatabaseApi
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -1504,7 +1504,7 @@ class ServerDatabaseApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1512,7 +1512,7 @@ class ServerDatabaseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1520,7 +1520,7 @@ class ServerDatabaseApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1538,7 +1538,7 @@ class ServerDatabaseApi
      * Create database
      *
      * @param  int $server The server ID (required)
-     * @param  \OpenAPI\Client\Model\StoreServerDatabaseRequest $store_server_database_request (required)
+     * @param  \Pelican\Client\Model\StoreServerDatabaseRequest $store_server_database_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['databaseStore'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1560,7 +1560,7 @@ class ServerDatabaseApi
      * Create database
      *
      * @param  int $server The server ID (required)
-     * @param  \OpenAPI\Client\Model\StoreServerDatabaseRequest $store_server_database_request (required)
+     * @param  \Pelican\Client\Model\StoreServerDatabaseRequest $store_server_database_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['databaseStore'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1611,7 +1611,7 @@ class ServerDatabaseApi
      * Create request for operation 'databaseStore'
      *
      * @param  int $server The server ID (required)
-     * @param  \OpenAPI\Client\Model\StoreServerDatabaseRequest $store_server_database_request (required)
+     * @param  \Pelican\Client\Model\StoreServerDatabaseRequest $store_server_database_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['databaseStore'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

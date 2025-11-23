@@ -1,4 +1,4 @@
-# OpenAPI\Client\NodeApi
+# Pelican\Client\NodeApi
 
 
 
@@ -18,7 +18,7 @@ All URIs are relative to https://game.prepaid-host.com/api/application, except i
 ## `applicationNodes()`
 
 ```php
-applicationNodes(): mixed[]
+applicationNodes(): object[]
 ```
 
 List nodes
@@ -33,10 +33,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\NodeApi(
+$apiInstance = new Pelican\Client\Api\NodeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -57,7 +57,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -75,7 +75,7 @@ This endpoint does not need any parameter.
 ## `applicationNodesView()`
 
 ```php
-applicationNodesView($node): mixed[]
+applicationNodesView($node): object[]
 ```
 
 View node
@@ -90,10 +90,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\NodeApi(
+$apiInstance = new Pelican\Client\Api\NodeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -117,7 +117,7 @@ try {
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -150,10 +150,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\NodeApi(
+$apiInstance = new Pelican\Client\Api\NodeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -210,16 +210,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\NodeApi(
+$apiInstance = new Pelican\Client\Api\NodeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$store_node_request = new \OpenAPI\Client\Model\StoreNodeRequest(); // \OpenAPI\Client\Model\StoreNodeRequest
+$store_node_request = new \Pelican\Client\Model\StoreNodeRequest(); // \Pelican\Client\Model\StoreNodeRequest
 
 try {
     $result = $apiInstance->nodeStore($store_node_request);
@@ -233,7 +233,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **store_node_request** | [**\OpenAPI\Client\Model\StoreNodeRequest**](../Model/StoreNodeRequest.md)|  | |
+| **store_node_request** | [**\Pelican\Client\Model\StoreNodeRequest**](../Model/StoreNodeRequest.md)|  | |
 
 ### Return type
 
@@ -255,7 +255,7 @@ try {
 ## `nodeUpdate()`
 
 ```php
-nodeUpdate($node): mixed[]
+nodeUpdate($node): object[]
 ```
 
 Update node
@@ -270,10 +270,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\NodeApi(
+$apiInstance = new Pelican\Client\Api\NodeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -297,7 +297,7 @@ try {
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -315,7 +315,7 @@ try {
 ## `nodesNodeConfiguration()`
 
 ```php
-nodesNodeConfiguration($node): \OpenAPI\Client\Model\NodesNodeConfiguration200Response
+nodesNodeConfiguration($node): \Pelican\Client\Model\NodesNodeConfiguration200Response
 ```
 
 Get node configuration
@@ -330,10 +330,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\NodeApi(
+$apiInstance = new Pelican\Client\Api\NodeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -357,7 +357,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\NodesNodeConfiguration200Response**](../Model/NodesNodeConfiguration200Response.md)
+[**\Pelican\Client\Model\NodesNodeConfiguration200Response**](../Model/NodesNodeConfiguration200Response.md)
 
 ### Authorization
 
@@ -375,7 +375,7 @@ try {
 ## `nodesNodeDeployment()`
 
 ```php
-nodesNodeDeployment($memory, $disk, $page, $cpu, $tags, $location_ids): mixed[]
+nodesNodeDeployment($memory, $disk, $page, $cpu, $tags, $location_ids): object[]
 ```
 
 Get deployable nodes
@@ -390,10 +390,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\NodeApi(
+$apiInstance = new Pelican\Client\Api\NodeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -427,7 +427,7 @@ try {
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 

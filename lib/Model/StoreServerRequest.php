@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Pelican\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Pelican\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Pelican\Client\ObjectSerializer;
 
 /**
  * StoreServerRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Pelican\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -68,10 +68,10 @@ class StoreServerRequest implements ModelInterface, ArrayAccess, \JsonSerializab
         'skip_scripts' => 'bool',
         'oom_killer' => 'bool',
         'start_on_completion' => 'bool',
-        'limits' => '\OpenAPI\Client\Model\StoreServerRequestLimits',
-        'feature_limits' => '\OpenAPI\Client\Model\StoreServerRequestFeatureLimits',
-        'allocation' => '\OpenAPI\Client\Model\StoreServerRequestAllocation',
-        'deploy' => '\OpenAPI\Client\Model\StoreServerRequestDeploy'
+        'limits' => '\Pelican\Client\Model\StoreServerRequestLimits',
+        'feature_limits' => '\Pelican\Client\Model\StoreServerRequestFeatureLimits',
+        'allocation' => '\Pelican\Client\Model\StoreServerRequestAllocation',
+        'deploy' => '\Pelican\Client\Model\StoreServerRequestDeploy'
     ];
 
     /**
@@ -749,7 +749,7 @@ class StoreServerRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets limits
      *
-     * @return \OpenAPI\Client\Model\StoreServerRequestLimits
+     * @return \Pelican\Client\Model\StoreServerRequestLimits
      */
     public function getLimits()
     {
@@ -759,7 +759,7 @@ class StoreServerRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets limits
      *
-     * @param \OpenAPI\Client\Model\StoreServerRequestLimits $limits limits
+     * @param \Pelican\Client\Model\StoreServerRequestLimits $limits limits
      *
      * @return self
      */
@@ -776,7 +776,7 @@ class StoreServerRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets feature_limits
      *
-     * @return \OpenAPI\Client\Model\StoreServerRequestFeatureLimits
+     * @return \Pelican\Client\Model\StoreServerRequestFeatureLimits
      */
     public function getFeatureLimits()
     {
@@ -786,7 +786,7 @@ class StoreServerRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets feature_limits
      *
-     * @param \OpenAPI\Client\Model\StoreServerRequestFeatureLimits $feature_limits feature_limits
+     * @param \Pelican\Client\Model\StoreServerRequestFeatureLimits $feature_limits feature_limits
      *
      * @return self
      */
@@ -803,7 +803,7 @@ class StoreServerRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets allocation
      *
-     * @return \OpenAPI\Client\Model\StoreServerRequestAllocation|null
+     * @return \Pelican\Client\Model\StoreServerRequestAllocation|null
      */
     public function getAllocation()
     {
@@ -813,7 +813,7 @@ class StoreServerRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets allocation
      *
-     * @param \OpenAPI\Client\Model\StoreServerRequestAllocation|null $allocation allocation
+     * @param \Pelican\Client\Model\StoreServerRequestAllocation|null $allocation allocation
      *
      * @return self
      */
@@ -830,7 +830,7 @@ class StoreServerRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets deploy
      *
-     * @return \OpenAPI\Client\Model\StoreServerRequestDeploy|null
+     * @return \Pelican\Client\Model\StoreServerRequestDeploy|null
      */
     public function getDeploy()
     {
@@ -840,7 +840,7 @@ class StoreServerRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets deploy
      *
-     * @param \OpenAPI\Client\Model\StoreServerRequestDeploy|null $deploy deploy
+     * @param \Pelican\Client\Model\StoreServerRequestDeploy|null $deploy deploy
      *
      * @return self
      */

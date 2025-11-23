@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **uuid** | **string** |  |
 **token_id** | **string** |  |
 **token** | **string** |  |
-**api** | [**\OpenAPI\Client\Model\NodesNodeConfiguration200ResponseApi**](NodesNodeConfiguration200ResponseApi.md) |  |
-**system** | [**\OpenAPI\Client\Model\NodesNodeConfiguration200ResponseSystem**](NodesNodeConfiguration200ResponseSystem.md) |  |
+**api** | [**\Pelican\Client\Model\NodesNodeConfiguration200ResponseApi**](NodesNodeConfiguration200ResponseApi.md) |  |
+**system** | [**\Pelican\Client\Model\NodesNodeConfiguration200ResponseSystem**](NodesNodeConfiguration200ResponseSystem.md) |  |
 **allowed_mounts** | **string** |  |
 **remote** | **string** |  |
 

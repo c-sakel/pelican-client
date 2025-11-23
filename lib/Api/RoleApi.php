@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Pelican\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Pelican\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Pelican\Client\ApiException;
+use Pelican\Client\Configuration;
+use Pelican\Client\FormDataProcessor;
+use Pelican\Client\HeaderSelector;
+use Pelican\Client\ObjectSerializer;
 
 /**
  * RoleApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Pelican\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -144,9 +144,9 @@ class RoleApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationRoles'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function applicationRoles(string $contentType = self::contentTypes['applicationRoles'][0])
     {
@@ -161,9 +161,9 @@ class RoleApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationRoles'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function applicationRolesWithHttpInfo(string $contentType = self::contentTypes['applicationRoles'][0])
     {
@@ -195,19 +195,19 @@ class RoleApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        'mixed[]',
+                        'object[]',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -229,7 +229,7 @@ class RoleApi
             }
 
             return $this->handleResponseWithDataType(
-                'mixed[]',
+                'object[]',
                 $request,
                 $response,
             );
@@ -238,7 +238,7 @@ class RoleApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'mixed[]',
+                        'object[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -246,7 +246,7 @@ class RoleApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class RoleApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -298,7 +298,7 @@ class RoleApi
      */
     public function applicationRolesAsyncWithHttpInfo(string $contentType = self::contentTypes['applicationRoles'][0])
     {
-        $returnType = 'mixed[]';
+        $returnType = 'object[]';
         $request = $this->applicationRolesRequest($contentType);
 
         return $this->client
@@ -425,9 +425,9 @@ class RoleApi
      * @param  int $role The role ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationRolesView'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function applicationRolesView($role, string $contentType = self::contentTypes['applicationRolesView'][0])
     {
@@ -443,9 +443,9 @@ class RoleApi
      * @param  int $role The role ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationRolesView'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function applicationRolesViewWithHttpInfo($role, string $contentType = self::contentTypes['applicationRolesView'][0])
     {
@@ -477,25 +477,25 @@ class RoleApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        'mixed[]',
+                        'object[]',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -517,7 +517,7 @@ class RoleApi
             }
 
             return $this->handleResponseWithDataType(
-                'mixed[]',
+                'object[]',
                 $request,
                 $response,
             );
@@ -526,7 +526,7 @@ class RoleApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'mixed[]',
+                        'object[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -534,7 +534,7 @@ class RoleApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -542,7 +542,7 @@ class RoleApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -550,7 +550,7 @@ class RoleApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -596,7 +596,7 @@ class RoleApi
      */
     public function applicationRolesViewAsyncWithHttpInfo($role, string $contentType = self::contentTypes['applicationRolesView'][0])
     {
-        $returnType = 'mixed[]';
+        $returnType = 'object[]';
         $request = $this->applicationRolesViewRequest($role, $contentType);
 
         return $this->client
@@ -739,7 +739,7 @@ class RoleApi
      * @param  int $role The role ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['roleDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -756,7 +756,7 @@ class RoleApi
      * @param  int $role The role ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['roleDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -793,7 +793,7 @@ class RoleApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -801,7 +801,7 @@ class RoleApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -809,7 +809,7 @@ class RoleApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -982,12 +982,12 @@ class RoleApi
      *
      * Create role
      *
-     * @param  \OpenAPI\Client\Model\StoreRoleRequest $store_role_request store_role_request (required)
+     * @param  \Pelican\Client\Model\StoreRoleRequest $store_role_request store_role_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['roleStore'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return object|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function roleStore($store_role_request, string $contentType = self::contentTypes['roleStore'][0])
     {
@@ -1000,12 +1000,12 @@ class RoleApi
      *
      * Create role
      *
-     * @param  \OpenAPI\Client\Model\StoreRoleRequest $store_role_request (required)
+     * @param  \Pelican\Client\Model\StoreRoleRequest $store_role_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['roleStore'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of object|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function roleStoreWithHttpInfo($store_role_request, string $contentType = self::contentTypes['roleStore'][0])
     {
@@ -1043,13 +1043,13 @@ class RoleApi
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -1088,7 +1088,7 @@ class RoleApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1096,7 +1096,7 @@ class RoleApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1113,7 +1113,7 @@ class RoleApi
      *
      * Create role
      *
-     * @param  \OpenAPI\Client\Model\StoreRoleRequest $store_role_request (required)
+     * @param  \Pelican\Client\Model\StoreRoleRequest $store_role_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['roleStore'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1134,7 +1134,7 @@ class RoleApi
      *
      * Create role
      *
-     * @param  \OpenAPI\Client\Model\StoreRoleRequest $store_role_request (required)
+     * @param  \Pelican\Client\Model\StoreRoleRequest $store_role_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['roleStore'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1184,7 +1184,7 @@ class RoleApi
     /**
      * Create request for operation 'roleStore'
      *
-     * @param  \OpenAPI\Client\Model\StoreRoleRequest $store_role_request (required)
+     * @param  \Pelican\Client\Model\StoreRoleRequest $store_role_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['roleStore'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1282,12 +1282,12 @@ class RoleApi
      * Update role
      *
      * @param  int $role The role ID (required)
-     * @param  \OpenAPI\Client\Model\UpdateRoleRequest $update_role_request update_role_request (required)
+     * @param  \Pelican\Client\Model\UpdateRoleRequest $update_role_request update_role_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['roleUpdate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function roleUpdate($role, $update_role_request, string $contentType = self::contentTypes['roleUpdate'][0])
     {
@@ -1301,12 +1301,12 @@ class RoleApi
      * Update role
      *
      * @param  int $role The role ID (required)
-     * @param  \OpenAPI\Client\Model\UpdateRoleRequest $update_role_request (required)
+     * @param  \Pelican\Client\Model\UpdateRoleRequest $update_role_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['roleUpdate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function roleUpdateWithHttpInfo($role, $update_role_request, string $contentType = self::contentTypes['roleUpdate'][0])
     {
@@ -1338,25 +1338,25 @@ class RoleApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        'mixed[]',
+                        'object[]',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -1378,7 +1378,7 @@ class RoleApi
             }
 
             return $this->handleResponseWithDataType(
-                'mixed[]',
+                'object[]',
                 $request,
                 $response,
             );
@@ -1387,7 +1387,7 @@ class RoleApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'mixed[]',
+                        'object[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1395,7 +1395,7 @@ class RoleApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1403,7 +1403,7 @@ class RoleApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1411,7 +1411,7 @@ class RoleApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1429,7 +1429,7 @@ class RoleApi
      * Update role
      *
      * @param  int $role The role ID (required)
-     * @param  \OpenAPI\Client\Model\UpdateRoleRequest $update_role_request (required)
+     * @param  \Pelican\Client\Model\UpdateRoleRequest $update_role_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['roleUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1451,7 +1451,7 @@ class RoleApi
      * Update role
      *
      * @param  int $role The role ID (required)
-     * @param  \OpenAPI\Client\Model\UpdateRoleRequest $update_role_request (required)
+     * @param  \Pelican\Client\Model\UpdateRoleRequest $update_role_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['roleUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1459,7 +1459,7 @@ class RoleApi
      */
     public function roleUpdateAsyncWithHttpInfo($role, $update_role_request, string $contentType = self::contentTypes['roleUpdate'][0])
     {
-        $returnType = 'mixed[]';
+        $returnType = 'object[]';
         $request = $this->roleUpdateRequest($role, $update_role_request, $contentType);
 
         return $this->client
@@ -1502,7 +1502,7 @@ class RoleApi
      * Create request for operation 'roleUpdate'
      *
      * @param  int $role The role ID (required)
-     * @param  \OpenAPI\Client\Model\UpdateRoleRequest $update_role_request (required)
+     * @param  \Pelican\Client\Model\UpdateRoleRequest $update_role_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['roleUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

@@ -1,4 +1,4 @@
-# OpenAPI\Client\UserApi
+# Pelican\Client\UserApi
 
 
 
@@ -19,7 +19,7 @@ All URIs are relative to https://game.prepaid-host.com/api/application, except i
 ## `applicationUsers()`
 
 ```php
-applicationUsers(): mixed[]
+applicationUsers(): object[]
 ```
 
 List users
@@ -34,10 +34,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new Pelican\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -58,7 +58,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -76,7 +76,7 @@ This endpoint does not need any parameter.
 ## `applicationUsersExternal()`
 
 ```php
-applicationUsersExternal($external_id): mixed[]
+applicationUsersExternal($external_id): object[]
 ```
 
 View user (external id)
@@ -91,10 +91,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new Pelican\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -118,7 +118,7 @@ try {
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -136,7 +136,7 @@ try {
 ## `applicationUsersView()`
 
 ```php
-applicationUsersView($user): mixed[]
+applicationUsersView($user): object[]
 ```
 
 View user
@@ -151,10 +151,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new Pelican\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -178,7 +178,7 @@ try {
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -196,7 +196,7 @@ try {
 ## `userAssignRoles()`
 
 ```php
-userAssignRoles($user, $assign_user_roles_request): mixed[]
+userAssignRoles($user, $assign_user_roles_request): object[]
 ```
 
 Assign role to user
@@ -211,17 +211,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new Pelican\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $user = 56; // int | The user ID
-$assign_user_roles_request = new \OpenAPI\Client\Model\AssignUserRolesRequest(); // \OpenAPI\Client\Model\AssignUserRolesRequest
+$assign_user_roles_request = new \Pelican\Client\Model\AssignUserRolesRequest(); // \Pelican\Client\Model\AssignUserRolesRequest
 
 try {
     $result = $apiInstance->userAssignRoles($user, $assign_user_roles_request);
@@ -236,11 +236,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **user** | **int**| The user ID | |
-| **assign_user_roles_request** | [**\OpenAPI\Client\Model\AssignUserRolesRequest**](../Model/AssignUserRolesRequest.md)|  | |
+| **assign_user_roles_request** | [**\Pelican\Client\Model\AssignUserRolesRequest**](../Model/AssignUserRolesRequest.md)|  | |
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -273,10 +273,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new Pelican\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -318,7 +318,7 @@ try {
 ## `userRemoveRoles()`
 
 ```php
-userRemoveRoles($user, $assign_user_roles_request): mixed[]
+userRemoveRoles($user, $assign_user_roles_request): object[]
 ```
 
 Unassign role from user
@@ -333,17 +333,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new Pelican\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $user = 56; // int | The user ID
-$assign_user_roles_request = new \OpenAPI\Client\Model\AssignUserRolesRequest(); // \OpenAPI\Client\Model\AssignUserRolesRequest
+$assign_user_roles_request = new \Pelican\Client\Model\AssignUserRolesRequest(); // \Pelican\Client\Model\AssignUserRolesRequest
 
 try {
     $result = $apiInstance->userRemoveRoles($user, $assign_user_roles_request);
@@ -358,11 +358,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **user** | **int**| The user ID | |
-| **assign_user_roles_request** | [**\OpenAPI\Client\Model\AssignUserRolesRequest**](../Model/AssignUserRolesRequest.md)|  | |
+| **assign_user_roles_request** | [**\Pelican\Client\Model\AssignUserRolesRequest**](../Model/AssignUserRolesRequest.md)|  | |
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -395,16 +395,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new Pelican\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$store_user_request = new \OpenAPI\Client\Model\StoreUserRequest(); // \OpenAPI\Client\Model\StoreUserRequest
+$store_user_request = new \Pelican\Client\Model\StoreUserRequest(); // \Pelican\Client\Model\StoreUserRequest
 
 try {
     $result = $apiInstance->userStore($store_user_request);
@@ -418,7 +418,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **store_user_request** | [**\OpenAPI\Client\Model\StoreUserRequest**](../Model/StoreUserRequest.md)|  | |
+| **store_user_request** | [**\Pelican\Client\Model\StoreUserRequest**](../Model/StoreUserRequest.md)|  | |
 
 ### Return type
 
@@ -440,7 +440,7 @@ try {
 ## `userUpdate()`
 
 ```php
-userUpdate($user): mixed[]
+userUpdate($user): object[]
 ```
 
 Update user
@@ -455,10 +455,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new Pelican\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -482,7 +482,7 @@ try {
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 

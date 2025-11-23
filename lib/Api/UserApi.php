@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Pelican\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Pelican\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Pelican\Client\ApiException;
+use Pelican\Client\Configuration;
+use Pelican\Client\FormDataProcessor;
+use Pelican\Client\HeaderSelector;
+use Pelican\Client\ObjectSerializer;
 
 /**
  * UserApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Pelican\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -153,9 +153,9 @@ class UserApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationUsers'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function applicationUsers(string $contentType = self::contentTypes['applicationUsers'][0])
     {
@@ -170,9 +170,9 @@ class UserApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationUsers'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function applicationUsersWithHttpInfo(string $contentType = self::contentTypes['applicationUsers'][0])
     {
@@ -204,19 +204,19 @@ class UserApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        'mixed[]',
+                        'object[]',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -238,7 +238,7 @@ class UserApi
             }
 
             return $this->handleResponseWithDataType(
-                'mixed[]',
+                'object[]',
                 $request,
                 $response,
             );
@@ -247,7 +247,7 @@ class UserApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'mixed[]',
+                        'object[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -255,7 +255,7 @@ class UserApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -263,7 +263,7 @@ class UserApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -307,7 +307,7 @@ class UserApi
      */
     public function applicationUsersAsyncWithHttpInfo(string $contentType = self::contentTypes['applicationUsers'][0])
     {
-        $returnType = 'mixed[]';
+        $returnType = 'object[]';
         $request = $this->applicationUsersRequest($contentType);
 
         return $this->client
@@ -434,9 +434,9 @@ class UserApi
      * @param  string $external_id external_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationUsersExternal'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function applicationUsersExternal($external_id, string $contentType = self::contentTypes['applicationUsersExternal'][0])
     {
@@ -452,9 +452,9 @@ class UserApi
      * @param  string $external_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationUsersExternal'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function applicationUsersExternalWithHttpInfo($external_id, string $contentType = self::contentTypes['applicationUsersExternal'][0])
     {
@@ -486,19 +486,19 @@ class UserApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        'mixed[]',
+                        'object[]',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -520,7 +520,7 @@ class UserApi
             }
 
             return $this->handleResponseWithDataType(
-                'mixed[]',
+                'object[]',
                 $request,
                 $response,
             );
@@ -529,7 +529,7 @@ class UserApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'mixed[]',
+                        'object[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -537,7 +537,7 @@ class UserApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -545,7 +545,7 @@ class UserApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -591,7 +591,7 @@ class UserApi
      */
     public function applicationUsersExternalAsyncWithHttpInfo($external_id, string $contentType = self::contentTypes['applicationUsersExternal'][0])
     {
-        $returnType = 'mixed[]';
+        $returnType = 'object[]';
         $request = $this->applicationUsersExternalRequest($external_id, $contentType);
 
         return $this->client
@@ -734,9 +734,9 @@ class UserApi
      * @param  int $user The user ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationUsersView'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function applicationUsersView($user, string $contentType = self::contentTypes['applicationUsersView'][0])
     {
@@ -752,9 +752,9 @@ class UserApi
      * @param  int $user The user ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applicationUsersView'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function applicationUsersViewWithHttpInfo($user, string $contentType = self::contentTypes['applicationUsersView'][0])
     {
@@ -786,25 +786,25 @@ class UserApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        'mixed[]',
+                        'object[]',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -826,7 +826,7 @@ class UserApi
             }
 
             return $this->handleResponseWithDataType(
-                'mixed[]',
+                'object[]',
                 $request,
                 $response,
             );
@@ -835,7 +835,7 @@ class UserApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'mixed[]',
+                        'object[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -843,7 +843,7 @@ class UserApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -851,7 +851,7 @@ class UserApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -859,7 +859,7 @@ class UserApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -905,7 +905,7 @@ class UserApi
      */
     public function applicationUsersViewAsyncWithHttpInfo($user, string $contentType = self::contentTypes['applicationUsersView'][0])
     {
-        $returnType = 'mixed[]';
+        $returnType = 'object[]';
         $request = $this->applicationUsersViewRequest($user, $contentType);
 
         return $this->client
@@ -1046,12 +1046,12 @@ class UserApi
      * Assign role to user
      *
      * @param  int $user The user ID (required)
-     * @param  \OpenAPI\Client\Model\AssignUserRolesRequest $assign_user_roles_request assign_user_roles_request (required)
+     * @param  \Pelican\Client\Model\AssignUserRolesRequest $assign_user_roles_request assign_user_roles_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAssignRoles'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function userAssignRoles($user, $assign_user_roles_request, string $contentType = self::contentTypes['userAssignRoles'][0])
     {
@@ -1065,12 +1065,12 @@ class UserApi
      * Assign role to user
      *
      * @param  int $user The user ID (required)
-     * @param  \OpenAPI\Client\Model\AssignUserRolesRequest $assign_user_roles_request (required)
+     * @param  \Pelican\Client\Model\AssignUserRolesRequest $assign_user_roles_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAssignRoles'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function userAssignRolesWithHttpInfo($user, $assign_user_roles_request, string $contentType = self::contentTypes['userAssignRoles'][0])
     {
@@ -1102,25 +1102,25 @@ class UserApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        'mixed[]',
+                        'object[]',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -1142,7 +1142,7 @@ class UserApi
             }
 
             return $this->handleResponseWithDataType(
-                'mixed[]',
+                'object[]',
                 $request,
                 $response,
             );
@@ -1151,7 +1151,7 @@ class UserApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'mixed[]',
+                        'object[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1159,7 +1159,7 @@ class UserApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1167,7 +1167,7 @@ class UserApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1175,7 +1175,7 @@ class UserApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1193,7 +1193,7 @@ class UserApi
      * Assign role to user
      *
      * @param  int $user The user ID (required)
-     * @param  \OpenAPI\Client\Model\AssignUserRolesRequest $assign_user_roles_request (required)
+     * @param  \Pelican\Client\Model\AssignUserRolesRequest $assign_user_roles_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAssignRoles'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1215,7 +1215,7 @@ class UserApi
      * Assign role to user
      *
      * @param  int $user The user ID (required)
-     * @param  \OpenAPI\Client\Model\AssignUserRolesRequest $assign_user_roles_request (required)
+     * @param  \Pelican\Client\Model\AssignUserRolesRequest $assign_user_roles_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAssignRoles'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1223,7 +1223,7 @@ class UserApi
      */
     public function userAssignRolesAsyncWithHttpInfo($user, $assign_user_roles_request, string $contentType = self::contentTypes['userAssignRoles'][0])
     {
-        $returnType = 'mixed[]';
+        $returnType = 'object[]';
         $request = $this->userAssignRolesRequest($user, $assign_user_roles_request, $contentType);
 
         return $this->client
@@ -1266,7 +1266,7 @@ class UserApi
      * Create request for operation 'userAssignRoles'
      *
      * @param  int $user The user ID (required)
-     * @param  \OpenAPI\Client\Model\AssignUserRolesRequest $assign_user_roles_request (required)
+     * @param  \Pelican\Client\Model\AssignUserRolesRequest $assign_user_roles_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAssignRoles'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1381,9 +1381,9 @@ class UserApi
      * @param  int $user The user ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return string[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return string[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function userDelete($user, string $contentType = self::contentTypes['userDelete'][0])
     {
@@ -1399,9 +1399,9 @@ class UserApi
      * @param  int $user The user ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of string[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of string[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function userDeleteWithHttpInfo($user, string $contentType = self::contentTypes['userDelete'][0])
     {
@@ -1439,19 +1439,19 @@ class UserApi
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -1490,7 +1490,7 @@ class UserApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1498,7 +1498,7 @@ class UserApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1506,7 +1506,7 @@ class UserApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1693,12 +1693,12 @@ class UserApi
      * Unassign role from user
      *
      * @param  int $user The user ID (required)
-     * @param  \OpenAPI\Client\Model\AssignUserRolesRequest $assign_user_roles_request assign_user_roles_request (required)
+     * @param  \Pelican\Client\Model\AssignUserRolesRequest $assign_user_roles_request assign_user_roles_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userRemoveRoles'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function userRemoveRoles($user, $assign_user_roles_request, string $contentType = self::contentTypes['userRemoveRoles'][0])
     {
@@ -1712,12 +1712,12 @@ class UserApi
      * Unassign role from user
      *
      * @param  int $user The user ID (required)
-     * @param  \OpenAPI\Client\Model\AssignUserRolesRequest $assign_user_roles_request (required)
+     * @param  \Pelican\Client\Model\AssignUserRolesRequest $assign_user_roles_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userRemoveRoles'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function userRemoveRolesWithHttpInfo($user, $assign_user_roles_request, string $contentType = self::contentTypes['userRemoveRoles'][0])
     {
@@ -1749,25 +1749,25 @@ class UserApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        'mixed[]',
+                        'object[]',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -1789,7 +1789,7 @@ class UserApi
             }
 
             return $this->handleResponseWithDataType(
-                'mixed[]',
+                'object[]',
                 $request,
                 $response,
             );
@@ -1798,7 +1798,7 @@ class UserApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'mixed[]',
+                        'object[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1806,7 +1806,7 @@ class UserApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1814,7 +1814,7 @@ class UserApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1822,7 +1822,7 @@ class UserApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1840,7 +1840,7 @@ class UserApi
      * Unassign role from user
      *
      * @param  int $user The user ID (required)
-     * @param  \OpenAPI\Client\Model\AssignUserRolesRequest $assign_user_roles_request (required)
+     * @param  \Pelican\Client\Model\AssignUserRolesRequest $assign_user_roles_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userRemoveRoles'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1862,7 +1862,7 @@ class UserApi
      * Unassign role from user
      *
      * @param  int $user The user ID (required)
-     * @param  \OpenAPI\Client\Model\AssignUserRolesRequest $assign_user_roles_request (required)
+     * @param  \Pelican\Client\Model\AssignUserRolesRequest $assign_user_roles_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userRemoveRoles'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1870,7 +1870,7 @@ class UserApi
      */
     public function userRemoveRolesAsyncWithHttpInfo($user, $assign_user_roles_request, string $contentType = self::contentTypes['userRemoveRoles'][0])
     {
-        $returnType = 'mixed[]';
+        $returnType = 'object[]';
         $request = $this->userRemoveRolesRequest($user, $assign_user_roles_request, $contentType);
 
         return $this->client
@@ -1913,7 +1913,7 @@ class UserApi
      * Create request for operation 'userRemoveRoles'
      *
      * @param  int $user The user ID (required)
-     * @param  \OpenAPI\Client\Model\AssignUserRolesRequest $assign_user_roles_request (required)
+     * @param  \Pelican\Client\Model\AssignUserRolesRequest $assign_user_roles_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userRemoveRoles'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2025,12 +2025,12 @@ class UserApi
      *
      * Create user
      *
-     * @param  \OpenAPI\Client\Model\StoreUserRequest $store_user_request store_user_request (required)
+     * @param  \Pelican\Client\Model\StoreUserRequest $store_user_request store_user_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userStore'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return object|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function userStore($store_user_request, string $contentType = self::contentTypes['userStore'][0])
     {
@@ -2043,12 +2043,12 @@ class UserApi
      *
      * Create user
      *
-     * @param  \OpenAPI\Client\Model\StoreUserRequest $store_user_request (required)
+     * @param  \Pelican\Client\Model\StoreUserRequest $store_user_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userStore'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of object|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function userStoreWithHttpInfo($store_user_request, string $contentType = self::contentTypes['userStore'][0])
     {
@@ -2086,13 +2086,13 @@ class UserApi
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -2131,7 +2131,7 @@ class UserApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2139,7 +2139,7 @@ class UserApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2156,7 +2156,7 @@ class UserApi
      *
      * Create user
      *
-     * @param  \OpenAPI\Client\Model\StoreUserRequest $store_user_request (required)
+     * @param  \Pelican\Client\Model\StoreUserRequest $store_user_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userStore'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2177,7 +2177,7 @@ class UserApi
      *
      * Create user
      *
-     * @param  \OpenAPI\Client\Model\StoreUserRequest $store_user_request (required)
+     * @param  \Pelican\Client\Model\StoreUserRequest $store_user_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userStore'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2227,7 +2227,7 @@ class UserApi
     /**
      * Create request for operation 'userStore'
      *
-     * @param  \OpenAPI\Client\Model\StoreUserRequest $store_user_request (required)
+     * @param  \Pelican\Client\Model\StoreUserRequest $store_user_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userStore'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2327,9 +2327,9 @@ class UserApi
      * @param  int $user The user ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userUpdate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject
+     * @return object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject
      */
     public function userUpdate($user, string $contentType = self::contentTypes['userUpdate'][0])
     {
@@ -2345,9 +2345,9 @@ class UserApi
      * @param  int $user The user ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userUpdate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Pelican\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed[]|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject1|\OpenAPI\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object[]|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject1|\Pelican\Client\Model\InlineObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function userUpdateWithHttpInfo($user, string $contentType = self::contentTypes['userUpdate'][0])
     {
@@ -2379,25 +2379,25 @@ class UserApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        'mixed[]',
+                        'object[]',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $request,
                         $response,
                     );
@@ -2419,7 +2419,7 @@ class UserApi
             }
 
             return $this->handleResponseWithDataType(
-                'mixed[]',
+                'object[]',
                 $request,
                 $response,
             );
@@ -2428,7 +2428,7 @@ class UserApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'mixed[]',
+                        'object[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2436,7 +2436,7 @@ class UserApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2444,7 +2444,7 @@ class UserApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject1',
+                        '\Pelican\Client\Model\InlineObject1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2452,7 +2452,7 @@ class UserApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineObject',
+                        '\Pelican\Client\Model\InlineObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2498,7 +2498,7 @@ class UserApi
      */
     public function userUpdateAsyncWithHttpInfo($user, string $contentType = self::contentTypes['userUpdate'][0])
     {
-        $returnType = 'mixed[]';
+        $returnType = 'object[]';
         $request = $this->userUpdateRequest($user, $contentType);
 
         return $this->client

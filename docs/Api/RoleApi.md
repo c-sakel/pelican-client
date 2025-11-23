@@ -1,4 +1,4 @@
-# OpenAPI\Client\RoleApi
+# Pelican\Client\RoleApi
 
 
 
@@ -16,7 +16,7 @@ All URIs are relative to https://game.prepaid-host.com/api/application, except i
 ## `applicationRoles()`
 
 ```php
-applicationRoles(): mixed[]
+applicationRoles(): object[]
 ```
 
 List roles
@@ -31,10 +31,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\RoleApi(
+$apiInstance = new Pelican\Client\Api\RoleApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -55,7 +55,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -73,7 +73,7 @@ This endpoint does not need any parameter.
 ## `applicationRolesView()`
 
 ```php
-applicationRolesView($role): mixed[]
+applicationRolesView($role): object[]
 ```
 
 View role
@@ -88,10 +88,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\RoleApi(
+$apiInstance = new Pelican\Client\Api\RoleApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -115,7 +115,7 @@ try {
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -148,10 +148,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\RoleApi(
+$apiInstance = new Pelican\Client\Api\RoleApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -207,16 +207,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\RoleApi(
+$apiInstance = new Pelican\Client\Api\RoleApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$store_role_request = new \OpenAPI\Client\Model\StoreRoleRequest(); // \OpenAPI\Client\Model\StoreRoleRequest
+$store_role_request = new \Pelican\Client\Model\StoreRoleRequest(); // \Pelican\Client\Model\StoreRoleRequest
 
 try {
     $result = $apiInstance->roleStore($store_role_request);
@@ -230,7 +230,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **store_role_request** | [**\OpenAPI\Client\Model\StoreRoleRequest**](../Model/StoreRoleRequest.md)|  | |
+| **store_role_request** | [**\Pelican\Client\Model\StoreRoleRequest**](../Model/StoreRoleRequest.md)|  | |
 
 ### Return type
 
@@ -252,7 +252,7 @@ try {
 ## `roleUpdate()`
 
 ```php
-roleUpdate($role, $update_role_request): mixed[]
+roleUpdate($role, $update_role_request): object[]
 ```
 
 Update role
@@ -267,17 +267,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\RoleApi(
+$apiInstance = new Pelican\Client\Api\RoleApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $role = 56; // int | The role ID
-$update_role_request = new \OpenAPI\Client\Model\UpdateRoleRequest(); // \OpenAPI\Client\Model\UpdateRoleRequest
+$update_role_request = new \Pelican\Client\Model\UpdateRoleRequest(); // \Pelican\Client\Model\UpdateRoleRequest
 
 try {
     $result = $apiInstance->roleUpdate($role, $update_role_request);
@@ -292,11 +292,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **role** | **int**| The role ID | |
-| **update_role_request** | [**\OpenAPI\Client\Model\UpdateRoleRequest**](../Model/UpdateRoleRequest.md)|  | |
+| **update_role_request** | [**\Pelican\Client\Model\UpdateRoleRequest**](../Model/UpdateRoleRequest.md)|  | |
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 

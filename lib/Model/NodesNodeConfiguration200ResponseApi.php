@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Pelican\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Pelican\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Pelican\Client\ObjectSerializer;
 
 /**
  * NodesNodeConfiguration200ResponseApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Pelican\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class NodesNodeConfiguration200ResponseApi implements ModelInterface, ArrayAcces
     protected static $openAPITypes = [
         'host' => 'string',
         'port' => 'int',
-        'ssl' => '\OpenAPI\Client\Model\NodesNodeConfiguration200ResponseApiSsl',
+        'ssl' => '\Pelican\Client\Model\NodesNodeConfiguration200ResponseApiSsl',
         'upload_limit' => 'int'
     ];
 
@@ -411,7 +411,7 @@ class NodesNodeConfiguration200ResponseApi implements ModelInterface, ArrayAcces
     /**
      * Gets ssl
      *
-     * @return \OpenAPI\Client\Model\NodesNodeConfiguration200ResponseApiSsl
+     * @return \Pelican\Client\Model\NodesNodeConfiguration200ResponseApiSsl
      */
     public function getSsl()
     {
@@ -421,7 +421,7 @@ class NodesNodeConfiguration200ResponseApi implements ModelInterface, ArrayAcces
     /**
      * Sets ssl
      *
-     * @param \OpenAPI\Client\Model\NodesNodeConfiguration200ResponseApiSsl $ssl ssl
+     * @param \Pelican\Client\Model\NodesNodeConfiguration200ResponseApiSsl $ssl ssl
      *
      * @return self
      */

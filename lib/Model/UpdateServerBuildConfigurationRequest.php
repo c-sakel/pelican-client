@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Pelican\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Pelican\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Pelican\Client\ObjectSerializer;
 
 /**
  * UpdateServerBuildConfigurationRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Pelican\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -65,10 +65,10 @@ class UpdateServerBuildConfigurationRequest implements ModelInterface, ArrayAcce
         'cpu' => 'float',
         'threads' => 'string',
         'disk' => 'float',
-        'limits' => '\OpenAPI\Client\Model\UpdateServerBuildConfigurationRequestLimits',
+        'limits' => '\Pelican\Client\Model\UpdateServerBuildConfigurationRequestLimits',
         'add_allocations' => 'int[]',
         'remove_allocations' => 'int[]',
-        'feature_limits' => '\OpenAPI\Client\Model\UpdateServerBuildConfigurationRequestFeatureLimits'
+        'feature_limits' => '\Pelican\Client\Model\UpdateServerBuildConfigurationRequestFeatureLimits'
     ];
 
     /**
@@ -654,7 +654,7 @@ class UpdateServerBuildConfigurationRequest implements ModelInterface, ArrayAcce
     /**
      * Gets limits
      *
-     * @return \OpenAPI\Client\Model\UpdateServerBuildConfigurationRequestLimits|null
+     * @return \Pelican\Client\Model\UpdateServerBuildConfigurationRequestLimits|null
      */
     public function getLimits()
     {
@@ -664,7 +664,7 @@ class UpdateServerBuildConfigurationRequest implements ModelInterface, ArrayAcce
     /**
      * Sets limits
      *
-     * @param \OpenAPI\Client\Model\UpdateServerBuildConfigurationRequestLimits|null $limits limits
+     * @param \Pelican\Client\Model\UpdateServerBuildConfigurationRequestLimits|null $limits limits
      *
      * @return self
      */
@@ -735,7 +735,7 @@ class UpdateServerBuildConfigurationRequest implements ModelInterface, ArrayAcce
     /**
      * Gets feature_limits
      *
-     * @return \OpenAPI\Client\Model\UpdateServerBuildConfigurationRequestFeatureLimits
+     * @return \Pelican\Client\Model\UpdateServerBuildConfigurationRequestFeatureLimits
      */
     public function getFeatureLimits()
     {
@@ -745,7 +745,7 @@ class UpdateServerBuildConfigurationRequest implements ModelInterface, ArrayAcce
     /**
      * Sets feature_limits
      *
-     * @param \OpenAPI\Client\Model\UpdateServerBuildConfigurationRequestFeatureLimits $feature_limits feature_limits
+     * @param \Pelican\Client\Model\UpdateServerBuildConfigurationRequestFeatureLimits $feature_limits feature_limits
      *
      * @return self
      */

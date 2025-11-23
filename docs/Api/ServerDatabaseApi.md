@@ -1,4 +1,4 @@
-# OpenAPI\Client\ServerDatabaseApi
+# Pelican\Client\ServerDatabaseApi
 
 
 
@@ -16,7 +16,7 @@ All URIs are relative to https://game.prepaid-host.com/api/application, except i
 ## `applicationServersDatabases()`
 
 ```php
-applicationServersDatabases($server): mixed[]
+applicationServersDatabases($server): object[]
 ```
 
 List databases
@@ -31,10 +31,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServerDatabaseApi(
+$apiInstance = new Pelican\Client\Api\ServerDatabaseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -58,7 +58,7 @@ try {
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -76,7 +76,7 @@ try {
 ## `applicationServersDatabasesView()`
 
 ```php
-applicationServersDatabasesView($server, $database): mixed[]
+applicationServersDatabasesView($server, $database): object[]
 ```
 
 View database
@@ -91,10 +91,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServerDatabaseApi(
+$apiInstance = new Pelican\Client\Api\ServerDatabaseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -120,7 +120,7 @@ try {
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -153,10 +153,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServerDatabaseApi(
+$apiInstance = new Pelican\Client\Api\ServerDatabaseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -214,10 +214,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServerDatabaseApi(
+$apiInstance = new Pelican\Client\Api\ServerDatabaseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -276,17 +276,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServerDatabaseApi(
+$apiInstance = new Pelican\Client\Api\ServerDatabaseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $server = 56; // int | The server ID
-$store_server_database_request = new \OpenAPI\Client\Model\StoreServerDatabaseRequest(); // \OpenAPI\Client\Model\StoreServerDatabaseRequest
+$store_server_database_request = new \Pelican\Client\Model\StoreServerDatabaseRequest(); // \Pelican\Client\Model\StoreServerDatabaseRequest
 
 try {
     $result = $apiInstance->databaseStore($server, $store_server_database_request);
@@ -301,7 +301,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **server** | **int**| The server ID | |
-| **store_server_database_request** | [**\OpenAPI\Client\Model\StoreServerDatabaseRequest**](../Model/StoreServerDatabaseRequest.md)|  | |
+| **store_server_database_request** | [**\Pelican\Client\Model\StoreServerDatabaseRequest**](../Model/StoreServerDatabaseRequest.md)|  | |
 
 ### Return type
 

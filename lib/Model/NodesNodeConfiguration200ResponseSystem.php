@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Pelican\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Pelican\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Pelican\Client\ObjectSerializer;
 
 /**
  * NodesNodeConfiguration200ResponseSystem Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Pelican\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class NodesNodeConfiguration200ResponseSystem implements ModelInterface, ArrayAc
       */
     protected static $openAPITypes = [
         'data' => 'string',
-        'sftp' => '\OpenAPI\Client\Model\NodesNodeConfiguration200ResponseSystemSftp'
+        'sftp' => '\Pelican\Client\Model\NodesNodeConfiguration200ResponseSystemSftp'
     ];
 
     /**
@@ -332,7 +332,7 @@ class NodesNodeConfiguration200ResponseSystem implements ModelInterface, ArrayAc
     /**
      * Gets sftp
      *
-     * @return \OpenAPI\Client\Model\NodesNodeConfiguration200ResponseSystemSftp
+     * @return \Pelican\Client\Model\NodesNodeConfiguration200ResponseSystemSftp
      */
     public function getSftp()
     {
@@ -342,7 +342,7 @@ class NodesNodeConfiguration200ResponseSystem implements ModelInterface, ArrayAc
     /**
      * Sets sftp
      *
-     * @param \OpenAPI\Client\Model\NodesNodeConfiguration200ResponseSystemSftp $sftp sftp
+     * @param \Pelican\Client\Model\NodesNodeConfiguration200ResponseSystemSftp $sftp sftp
      *
      * @return self
      */

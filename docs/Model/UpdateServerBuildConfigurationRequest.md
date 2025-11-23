@@ -12,9 +12,9 @@ Name | Type | Description | Notes
 **cpu** | **float** | Deprecated - use limits.cpu | [optional]
 **threads** | **string** | Deprecated - use limits.threads | [optional]
 **disk** | **float** | Deprecated - use limits.disk | [optional]
-**limits** | [**\OpenAPI\Client\Model\UpdateServerBuildConfigurationRequestLimits**](UpdateServerBuildConfigurationRequestLimits.md) |  | [optional]
+**limits** | [**\Pelican\Client\Model\UpdateServerBuildConfigurationRequestLimits**](UpdateServerBuildConfigurationRequestLimits.md) |  | [optional]
 **add_allocations** | **int[]** |  | [optional]
 **remove_allocations** | **int[]** |  | [optional]
-**feature_limits** | [**\OpenAPI\Client\Model\UpdateServerBuildConfigurationRequestFeatureLimits**](UpdateServerBuildConfigurationRequestFeatureLimits.md) |  |
+**feature_limits** | [**\Pelican\Client\Model\UpdateServerBuildConfigurationRequestFeatureLimits**](UpdateServerBuildConfigurationRequestFeatureLimits.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

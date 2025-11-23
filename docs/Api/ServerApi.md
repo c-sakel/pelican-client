@@ -1,4 +1,4 @@
-# OpenAPI\Client\ServerApi
+# Pelican\Client\ServerApi
 
 
 
@@ -25,7 +25,7 @@ All URIs are relative to https://game.prepaid-host.com/api/application, except i
 ## `applicationServers()`
 
 ```php
-applicationServers($search): mixed[]
+applicationServers($search): object[]
 ```
 
 List servers
@@ -40,10 +40,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServerApi(
+$apiInstance = new Pelican\Client\Api\ServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -67,7 +67,7 @@ try {
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -85,7 +85,7 @@ try {
 ## `applicationServersBuild()`
 
 ```php
-applicationServersBuild($server, $update_server_build_configuration_request): mixed[]
+applicationServersBuild($server, $update_server_build_configuration_request): object[]
 ```
 
 Update build
@@ -100,17 +100,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServerApi(
+$apiInstance = new Pelican\Client\Api\ServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $server = 56; // int | The server ID
-$update_server_build_configuration_request = new \OpenAPI\Client\Model\UpdateServerBuildConfigurationRequest(); // \OpenAPI\Client\Model\UpdateServerBuildConfigurationRequest
+$update_server_build_configuration_request = new \Pelican\Client\Model\UpdateServerBuildConfigurationRequest(); // \Pelican\Client\Model\UpdateServerBuildConfigurationRequest
 
 try {
     $result = $apiInstance->applicationServersBuild($server, $update_server_build_configuration_request);
@@ -125,11 +125,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **server** | **int**| The server ID | |
-| **update_server_build_configuration_request** | [**\OpenAPI\Client\Model\UpdateServerBuildConfigurationRequest**](../Model/UpdateServerBuildConfigurationRequest.md)|  | |
+| **update_server_build_configuration_request** | [**\Pelican\Client\Model\UpdateServerBuildConfigurationRequest**](../Model/UpdateServerBuildConfigurationRequest.md)|  | |
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -147,7 +147,7 @@ try {
 ## `applicationServersDetails()`
 
 ```php
-applicationServersDetails($server, $update_server_details_request): mixed[]
+applicationServersDetails($server, $update_server_details_request): object[]
 ```
 
 Update details
@@ -162,17 +162,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServerApi(
+$apiInstance = new Pelican\Client\Api\ServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $server = 56; // int | The server ID
-$update_server_details_request = new \OpenAPI\Client\Model\UpdateServerDetailsRequest(); // \OpenAPI\Client\Model\UpdateServerDetailsRequest
+$update_server_details_request = new \Pelican\Client\Model\UpdateServerDetailsRequest(); // \Pelican\Client\Model\UpdateServerDetailsRequest
 
 try {
     $result = $apiInstance->applicationServersDetails($server, $update_server_details_request);
@@ -187,11 +187,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **server** | **int**| The server ID | |
-| **update_server_details_request** | [**\OpenAPI\Client\Model\UpdateServerDetailsRequest**](../Model/UpdateServerDetailsRequest.md)|  | |
+| **update_server_details_request** | [**\Pelican\Client\Model\UpdateServerDetailsRequest**](../Model/UpdateServerDetailsRequest.md)|  | |
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -209,7 +209,7 @@ try {
 ## `applicationServersExternal()`
 
 ```php
-applicationServersExternal($external_id): mixed[]
+applicationServersExternal($external_id): object[]
 ```
 
 View server (external id)
@@ -224,10 +224,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServerApi(
+$apiInstance = new Pelican\Client\Api\ServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -251,7 +251,7 @@ try {
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -284,10 +284,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServerApi(
+$apiInstance = new Pelican\Client\Api\ServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -343,10 +343,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServerApi(
+$apiInstance = new Pelican\Client\Api\ServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -404,10 +404,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServerApi(
+$apiInstance = new Pelican\Client\Api\ServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -448,7 +448,7 @@ void (empty response body)
 ## `applicationServersStartup()`
 
 ```php
-applicationServersStartup($server, $update_server_startup_request): mixed[]
+applicationServersStartup($server, $update_server_startup_request): object[]
 ```
 
 Update startup
@@ -463,17 +463,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServerApi(
+$apiInstance = new Pelican\Client\Api\ServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $server = 56; // int | The server ID
-$update_server_startup_request = new \OpenAPI\Client\Model\UpdateServerStartupRequest(); // \OpenAPI\Client\Model\UpdateServerStartupRequest
+$update_server_startup_request = new \Pelican\Client\Model\UpdateServerStartupRequest(); // \Pelican\Client\Model\UpdateServerStartupRequest
 
 try {
     $result = $apiInstance->applicationServersStartup($server, $update_server_startup_request);
@@ -488,11 +488,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **server** | **int**| The server ID | |
-| **update_server_startup_request** | [**\OpenAPI\Client\Model\UpdateServerStartupRequest**](../Model/UpdateServerStartupRequest.md)|  | |
+| **update_server_startup_request** | [**\Pelican\Client\Model\UpdateServerStartupRequest**](../Model/UpdateServerStartupRequest.md)|  | |
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -525,10 +525,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServerApi(
+$apiInstance = new Pelican\Client\Api\ServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -584,17 +584,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServerApi(
+$apiInstance = new Pelican\Client\Api\ServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $server = 56; // int | The server ID
-$application_servers_transfer_request = new \OpenAPI\Client\Model\ApplicationServersTransferRequest(); // \OpenAPI\Client\Model\ApplicationServersTransferRequest
+$application_servers_transfer_request = new \Pelican\Client\Model\ApplicationServersTransferRequest(); // \Pelican\Client\Model\ApplicationServersTransferRequest
 
 try {
     $apiInstance->applicationServersTransfer($server, $application_servers_transfer_request);
@@ -608,7 +608,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **server** | **int**| The server ID | |
-| **application_servers_transfer_request** | [**\OpenAPI\Client\Model\ApplicationServersTransferRequest**](../Model/ApplicationServersTransferRequest.md)|  | [optional] |
+| **application_servers_transfer_request** | [**\Pelican\Client\Model\ApplicationServersTransferRequest**](../Model/ApplicationServersTransferRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -645,10 +645,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServerApi(
+$apiInstance = new Pelican\Client\Api\ServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -704,10 +704,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServerApi(
+$apiInstance = new Pelican\Client\Api\ServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -748,7 +748,7 @@ void (empty response body)
 ## `applicationServersView()`
 
 ```php
-applicationServersView($server): mixed[]
+applicationServersView($server): object[]
 ```
 
 View server
@@ -763,10 +763,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServerApi(
+$apiInstance = new Pelican\Client\Api\ServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -790,7 +790,7 @@ try {
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -823,16 +823,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServerApi(
+$apiInstance = new Pelican\Client\Api\ServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$store_server_request = new \OpenAPI\Client\Model\StoreServerRequest(); // \OpenAPI\Client\Model\StoreServerRequest
+$store_server_request = new \Pelican\Client\Model\StoreServerRequest(); // \Pelican\Client\Model\StoreServerRequest
 
 try {
     $result = $apiInstance->serverStore($store_server_request);
@@ -846,7 +846,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **store_server_request** | [**\OpenAPI\Client\Model\StoreServerRequest**](../Model/StoreServerRequest.md)|  | |
+| **store_server_request** | [**\Pelican\Client\Model\StoreServerRequest**](../Model/StoreServerRequest.md)|  | |
 
 ### Return type
 

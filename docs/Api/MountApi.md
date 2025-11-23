@@ -1,4 +1,4 @@
-# OpenAPI\Client\MountApi
+# Pelican\Client\MountApi
 
 
 
@@ -25,7 +25,7 @@ All URIs are relative to https://game.prepaid-host.com/api/application, except i
 ## `applicationMounts()`
 
 ```php
-applicationMounts(): mixed[]
+applicationMounts(): object[]
 ```
 
 List mounts
@@ -40,10 +40,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MountApi(
+$apiInstance = new Pelican\Client\Api\MountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -64,7 +64,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -82,7 +82,7 @@ This endpoint does not need any parameter.
 ## `applicationMountsEggs()`
 
 ```php
-applicationMountsEggs($mount, $application_mounts_eggs_request): mixed[]
+applicationMountsEggs($mount, $application_mounts_eggs_request): object[]
 ```
 
 Assign eggs to mount
@@ -97,17 +97,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MountApi(
+$apiInstance = new Pelican\Client\Api\MountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $mount = 56; // int | The mount ID
-$application_mounts_eggs_request = new \OpenAPI\Client\Model\ApplicationMountsEggsRequest(); // \OpenAPI\Client\Model\ApplicationMountsEggsRequest
+$application_mounts_eggs_request = new \Pelican\Client\Model\ApplicationMountsEggsRequest(); // \Pelican\Client\Model\ApplicationMountsEggsRequest
 
 try {
     $result = $apiInstance->applicationMountsEggs($mount, $application_mounts_eggs_request);
@@ -122,11 +122,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **mount** | **int**| The mount ID | |
-| **application_mounts_eggs_request** | [**\OpenAPI\Client\Model\ApplicationMountsEggsRequest**](../Model/ApplicationMountsEggsRequest.md)|  | |
+| **application_mounts_eggs_request** | [**\Pelican\Client\Model\ApplicationMountsEggsRequest**](../Model/ApplicationMountsEggsRequest.md)|  | |
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -144,7 +144,7 @@ try {
 ## `applicationMountsNodes()`
 
 ```php
-applicationMountsNodes($mount, $application_mounts_nodes_request): mixed[]
+applicationMountsNodes($mount, $application_mounts_nodes_request): object[]
 ```
 
 Assign nodes to mount
@@ -159,17 +159,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MountApi(
+$apiInstance = new Pelican\Client\Api\MountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $mount = 56; // int | The mount ID
-$application_mounts_nodes_request = new \OpenAPI\Client\Model\ApplicationMountsNodesRequest(); // \OpenAPI\Client\Model\ApplicationMountsNodesRequest
+$application_mounts_nodes_request = new \Pelican\Client\Model\ApplicationMountsNodesRequest(); // \Pelican\Client\Model\ApplicationMountsNodesRequest
 
 try {
     $result = $apiInstance->applicationMountsNodes($mount, $application_mounts_nodes_request);
@@ -184,11 +184,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **mount** | **int**| The mount ID | |
-| **application_mounts_nodes_request** | [**\OpenAPI\Client\Model\ApplicationMountsNodesRequest**](../Model/ApplicationMountsNodesRequest.md)|  | |
+| **application_mounts_nodes_request** | [**\Pelican\Client\Model\ApplicationMountsNodesRequest**](../Model/ApplicationMountsNodesRequest.md)|  | |
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -206,7 +206,7 @@ try {
 ## `applicationMountsServers()`
 
 ```php
-applicationMountsServers($mount, $application_mounts_servers_request): mixed[]
+applicationMountsServers($mount, $application_mounts_servers_request): object[]
 ```
 
 Assign servers to mount
@@ -221,17 +221,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MountApi(
+$apiInstance = new Pelican\Client\Api\MountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $mount = 56; // int | The mount ID
-$application_mounts_servers_request = new \OpenAPI\Client\Model\ApplicationMountsServersRequest(); // \OpenAPI\Client\Model\ApplicationMountsServersRequest
+$application_mounts_servers_request = new \Pelican\Client\Model\ApplicationMountsServersRequest(); // \Pelican\Client\Model\ApplicationMountsServersRequest
 
 try {
     $result = $apiInstance->applicationMountsServers($mount, $application_mounts_servers_request);
@@ -246,11 +246,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **mount** | **int**| The mount ID | |
-| **application_mounts_servers_request** | [**\OpenAPI\Client\Model\ApplicationMountsServersRequest**](../Model/ApplicationMountsServersRequest.md)|  | |
+| **application_mounts_servers_request** | [**\Pelican\Client\Model\ApplicationMountsServersRequest**](../Model/ApplicationMountsServersRequest.md)|  | |
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -268,7 +268,7 @@ try {
 ## `applicationMountsView()`
 
 ```php
-applicationMountsView($mount): mixed[]
+applicationMountsView($mount): object[]
 ```
 
 View mount
@@ -283,10 +283,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MountApi(
+$apiInstance = new Pelican\Client\Api\MountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -310,7 +310,7 @@ try {
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -343,10 +343,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MountApi(
+$apiInstance = new Pelican\Client\Api\MountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -403,10 +403,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MountApi(
+$apiInstance = new Pelican\Client\Api\MountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -465,10 +465,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MountApi(
+$apiInstance = new Pelican\Client\Api\MountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -527,10 +527,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MountApi(
+$apiInstance = new Pelican\Client\Api\MountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -574,7 +574,7 @@ try {
 ## `mountGetEggs()`
 
 ```php
-mountGetEggs($mount): mixed[]
+mountGetEggs($mount): object[]
 ```
 
 List assigned eggs
@@ -587,10 +587,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MountApi(
+$apiInstance = new Pelican\Client\Api\MountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -614,7 +614,7 @@ try {
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -632,7 +632,7 @@ try {
 ## `mountGetNodes()`
 
 ```php
-mountGetNodes($mount): mixed[]
+mountGetNodes($mount): object[]
 ```
 
 List assigned nodes
@@ -645,10 +645,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MountApi(
+$apiInstance = new Pelican\Client\Api\MountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -672,7 +672,7 @@ try {
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -690,7 +690,7 @@ try {
 ## `mountGetServers()`
 
 ```php
-mountGetServers($mount): mixed[]
+mountGetServers($mount): object[]
 ```
 
 List assigned servers
@@ -703,10 +703,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MountApi(
+$apiInstance = new Pelican\Client\Api\MountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -730,7 +730,7 @@ try {
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 
@@ -763,10 +763,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MountApi(
+$apiInstance = new Pelican\Client\Api\MountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -805,7 +805,7 @@ This endpoint does not need any parameter.
 ## `mountUpdate()`
 
 ```php
-mountUpdate($mount): mixed[]
+mountUpdate($mount): object[]
 ```
 
 Update mount
@@ -820,10 +820,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: http
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Pelican\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MountApi(
+$apiInstance = new Pelican\Client\Api\MountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -847,7 +847,7 @@ try {
 
 ### Return type
 
-**mixed[]**
+**object[]**
 
 ### Authorization
 

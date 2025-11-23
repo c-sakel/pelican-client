@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Pelican\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Pelican\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Pelican\Client\ObjectSerializer;
 
 /**
  * NodesNodeConfiguration200Response Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Pelican\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,8 +61,8 @@ class NodesNodeConfiguration200Response implements ModelInterface, ArrayAccess, 
         'uuid' => 'string',
         'token_id' => 'string',
         'token' => 'string',
-        'api' => '\OpenAPI\Client\Model\NodesNodeConfiguration200ResponseApi',
-        'system' => '\OpenAPI\Client\Model\NodesNodeConfiguration200ResponseSystem',
+        'api' => '\Pelican\Client\Model\NodesNodeConfiguration200ResponseApi',
+        'system' => '\Pelican\Client\Model\NodesNodeConfiguration200ResponseSystem',
         'allowed_mounts' => 'string',
         'remote' => 'string'
     ];
@@ -487,7 +487,7 @@ class NodesNodeConfiguration200Response implements ModelInterface, ArrayAccess, 
     /**
      * Gets api
      *
-     * @return \OpenAPI\Client\Model\NodesNodeConfiguration200ResponseApi
+     * @return \Pelican\Client\Model\NodesNodeConfiguration200ResponseApi
      */
     public function getApi()
     {
@@ -497,7 +497,7 @@ class NodesNodeConfiguration200Response implements ModelInterface, ArrayAccess, 
     /**
      * Sets api
      *
-     * @param \OpenAPI\Client\Model\NodesNodeConfiguration200ResponseApi $api api
+     * @param \Pelican\Client\Model\NodesNodeConfiguration200ResponseApi $api api
      *
      * @return self
      */
@@ -514,7 +514,7 @@ class NodesNodeConfiguration200Response implements ModelInterface, ArrayAccess, 
     /**
      * Gets system
      *
-     * @return \OpenAPI\Client\Model\NodesNodeConfiguration200ResponseSystem
+     * @return \Pelican\Client\Model\NodesNodeConfiguration200ResponseSystem
      */
     public function getSystem()
     {
@@ -524,7 +524,7 @@ class NodesNodeConfiguration200Response implements ModelInterface, ArrayAccess, 
     /**
      * Sets system
      *
-     * @param \OpenAPI\Client\Model\NodesNodeConfiguration200ResponseSystem $system system
+     * @param \Pelican\Client\Model\NodesNodeConfiguration200ResponseSystem $system system
      *
      * @return self
      */
