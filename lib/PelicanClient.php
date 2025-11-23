@@ -1,27 +1,24 @@
 <?php
 
-namespace Pelican\Client;
+namespace App\Services\Pelican;
 
 use GuzzleHttp\Client as GuzzleClient;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\Api\ServerApi;
-use OpenAPI\Client\Api\UserApi;
+use Pelican\Client\Configuration;
+use Pelican\Client\Api\ServerApi;
+use Pelican\Client\Api\UserApi;
 
 class PelicanClient
 {
     private Configuration $config;
     private GuzzleClient $http;
 
-    public function __construct(
-        string $baseUri,
-        string $token,
-        ?GuzzleClient $httpClient = null,
-    ) {
-        $this->http = $httpClient ?: new GuzzleClient();
+    public function __construct(string $baseUri, string $token)
+    {
+        $this->http = new GuzzleClient();
 
         $this->config = Configuration::getDefaultConfiguration()
-            ->setHost($baseUri)          // z. B. https://panel/api/application
-            ->setAccessToken($token);    // Bearer Token
+            ->setHost($baseUri)
+            ->setAccessToken($token);
     }
 
     public function servers(): ServerApi
@@ -33,7 +30,5 @@ class PelicanClient
     {
         return new UserApi($this->http, $this->config);
     }
-
-    // nodes(), mounts(), databases() usw. bei Bedarf
 }
 
